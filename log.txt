@@ -1,0 +1,23 @@
+General utils installed
+
+* Installed dig from 'dnsutils'
+* Installed Emacs 'emacs23-nox'
+* Installed 'screen'
+
+Misc:
+
+* Installed rasbian on model B rpi, 3.10 kernel
+* Updated system
+* Started SSH server and uploaded keys
+
+Firewall & NAT:
+
+* Add: net.ipv4.ip_forward=1 to /etc/sysctl.conf
+* Copy iptables.rules to /etc/iptables/iptables.rules
+* Add to /etc/network/interfaces (under eth0)  pre-up iptables-restore < /etc/iptables.rules
+
+DNS & DHCP
+
+* Installed dnsmasq from 'dnsmasq'
+* Edit /etc/dnsmasq.conf
+* Update /etc/resolv.conf

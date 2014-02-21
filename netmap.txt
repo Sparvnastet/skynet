@@ -1,0 +1,15 @@
++- AP_1 [192.168.1.1]
+|   + Client_1 [192.168.42.1]
+|   + Client_2 [192.168.42.2]
++- AP_2 [192.168.1.2]
+|
++- Switch [192.168.0.2]
+|
++- GW [192.168.0.1]
+   NAT
+   DHCP
+   +- 3/4G Uplink 
+
+   192.168.0.0/24 -> Fixed IPs internal infrastructure switches/firewalls/gw
+   192.168.1.0/24 -> Fixed IPs wifi access points
+   192.168.42.0/24 -> DHCP-assigned - for clients
