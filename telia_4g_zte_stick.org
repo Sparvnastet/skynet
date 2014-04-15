@@ -1,0 +1,27 @@
+
+* Modeswitch
+Requires usb_modeswitch
+
+: Before modeswitch:
+:  Bus 002 Device 006: ID 19d2:1225 ZTE WCDMA Technologies MSM
+: After modeswitch:
+:  Bus 002 Device 009: ID 19d2:1403 ZTE WCDMA Technologies MSM
+
+* Kernel
+: Device Drivers -->
+:   USB Supoort -->
+:     USB Serial Converter Support --> [CONFIG_USB_SERIAL]
+:       [*] USB Serial Console device support [CONFIG_USB_SERIAL_CONSOLE]
+:       [*] USB Generic Serial Driver [CONFIG_USB_SERIAL_GENERIC]
+:       <*> ZTE USB serial driver [CONFIG_USB_SERIAL_ZTE]
+:   Network Device Support -->
+:     USB Network adapters -->
+:       <*> Multi-purpose USB Networking Framework [CONFIG_USB_USBNET]
+:         <*> Host for RNDIS and ActiveSync devices [CONFIG_USB_NET_RNDIS_HOST]
+
+* Connecting
+Shows up as =enp0s20u1= in my system. Just =dhcpcd= to it and you're connected with an ip in 192.168.32.0 range.
+
+* Other
+https://bbs.archlinux.org/viewtopic.php?id=175020
+
